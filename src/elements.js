@@ -89,7 +89,8 @@ const getElement = (theme, indentation, indentSize, collapsible) => (element, in
 }
 
 const Elements = memo(({ elements, theme, indentation, indentSize, collapsible }) => {
-    return elements.map(getElement(theme, indentation, indentSize, collapsible));
+    const existantElements = elements || [];
+    return existantElements.map(getElement(theme, indentation, indentSize, collapsible));
 });
 
 Elements.propTypes = {

@@ -2690,7 +2690,8 @@ var Elements = React.memo(function (_ref2) {
         indentSize = _ref2.indentSize,
         collapsible = _ref2.collapsible;
 
-    return elements.map(getElement(theme, indentation, indentSize, collapsible));
+    var existantElements = elements || [];
+    return existantElements.map(getElement(theme, indentation, indentSize, collapsible));
 });
 
 Elements.propTypes = {
